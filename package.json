@@ -1,0 +1,25 @@
+{
+  "name": "wisconsin-index-generator",
+  "version": "0.0.1",
+  "description": "Generate an index.xml file for a Raccoon archive",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pwlin/wisconsin-index-generator"
+  },
+  "author": "pwlin <pwlin05@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pwlin/wisconsin-index-generator/issues"
+  },
+  "homepage": "https://github.com/pwlin/wisconsin-index-generator",
+  "dependencies": {
+    "adm-zip": "^0.4.4",
+    "spawn-sync": "^1.0.0",
+    "xmlbuilder": "^2.4.4"
+  },
+  "devDependencies": {}
+}
