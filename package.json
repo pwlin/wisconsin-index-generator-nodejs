@@ -18,6 +18,7 @@
   "homepage": "https://github.com/pwlin/wisconsin-index-generator",
   "dependencies": {
     "adm-zip": "^0.4.4",
+    "pretty-data": "^0.40.0",
     "spawn-sync": "^1.0.0",
     "xmlbuilder": "^2.4.4"
   },
