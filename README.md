@@ -5,7 +5,7 @@ This script will generate an `index.xml` file for a [Raccoon](https://github.com
 Before You Begin
 ==============
 1. Make sure you have **[nodejs](http://nodejs.org/)** already installed.
-2. make sure that you have [Android SDK](http://developer.android.com/sdk/installing/index.html) installed and that `aapt` utility is in your PATH. `aapt` utility is located at `[your-android-installation]/build-tools/[version-number]/`. Add this to your path.
+2. Make sure you have [Android SDK](http://developer.android.com/sdk/installing/index.html) installed and that `aapt` utility is in your PATH. `aapt` utility is located at `[your-android-installation]/build-tools/[version-number]/`. Add this to your path.
 
 How To Use
 =========================
@@ -15,4 +15,4 @@ How To Use
 
 Example Output
 =========================
-To know what you would expect, there is an `index.example.xml` file inside this repository.  
+To know the format of expected output, there is an `index.example.xml` file inside this repository.  
