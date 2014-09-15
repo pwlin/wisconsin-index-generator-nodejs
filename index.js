@@ -1,7 +1,6 @@
 var fs = require('fs');
 var path = require('path');
 var utils = require('./lib/utils');
-var prettyjson = require('prettyjson');
 
 var apkStoragePath = path.resolve(process.argv[2] || __dirname);
 
