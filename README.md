@@ -11,7 +11,8 @@ How To Use
 =========================
 1. `git clone` this repository 
 2. `cd` to the cloned directory and install the dependencies with `npm install`
-2. run `node index.js /path/to/apk_storage`
+3. Run `node index.js /path/to/apk_storage`
+4. There will be an `index.xml` file in `/path/to/apk_storage` directory.
 
 Example Output
 =========================
