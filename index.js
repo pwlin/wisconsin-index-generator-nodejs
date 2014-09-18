@@ -17,8 +17,11 @@ var apkId = '';
 var apkName = '';
 var apkVersionName = '';
 var apkVersionCode = '';
+var apkPermissionsRegExp = null;
+var apkPermissions = [];
 var apkIconPath = '';
 var apkIconBase64 = '';
+
 
 utils.forEach(files, function(k, v) {
   console.log('Processing ', v);
@@ -40,12 +43,20 @@ utils.forEach(files, function(k, v) {
   }
   apkVersionName = aaptData.match(/versionName='(.*?)'/)[1];
   apkVersionCode = aaptData.match(/versionCode='(.*?)'/)[1];
+
+  apkPermissions = [];
+  apkPermissionsRegExp = new RegExp(/uses-permission\:'android\.permission\.(.*?)'/g );
+  while((match = apkPermissionsRegExp.exec(aaptData))) {
+    apkPermissions.push(match[1]);
+  }
+  apkPermissions.sort();
   
   if (raccoonData[apkId]) {
     raccoonData[apkId].versions.push({
       version: apkVersionName,
       versioncode: apkVersionCode,
-      apkName: v.replace(apkStoragePath, '').replace(/\\/ig, '/').replace(/^\//, '')
+      apkName: v.replace(apkStoragePath, '').replace(/\\/ig, '/').replace(/^\//, ''),
+      permissions : apkPermissions.join()
     });
   } else {
     apkIconPath = aaptData.match(/application\: label='(.*?)' icon='(.*?)'/);
@@ -62,7 +73,8 @@ utils.forEach(files, function(k, v) {
         {
           version: apkVersionName,
           versioncode: apkVersionCode,
-          apkName: v.replace(apkStoragePath, '').replace(/\\/ig, '/').replace(/^\//, '')
+          apkName: v.replace(apkStoragePath, '').replace(/\\/ig, '/').replace(/^\//, ''),
+          permissions : apkPermissions.join()
         }
       ]
     };
