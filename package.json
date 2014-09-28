@@ -3,6 +3,9 @@
     "version": "0.0.3",
     "description": "Generate an index.xml file for a Raccoon archive",
     "main": "index.js",
+    "bin": {
+        "wisconsin-index-generator": "./index.js"
+    },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
