@@ -4,15 +4,17 @@ This script will generate an `index.xml` file for a [Raccoon](https://github.com
 
 Before You Begin
 ==============
-1. Make sure you have **[nodejs](http://nodejs.org/)** already installed.
+1. Make sure you have **[NodeJS](http://nodejs.org/)** already installed.
 2. Make sure you have [Android SDK](http://developer.android.com/sdk/installing/index.html) installed and that `aapt` utility is in your PATH. `aapt` utility is located at `[your-android-installation]/build-tools/[version-number]/`. Add this to your path.
 
-How To Use
+Install
+========
+    npm install -g wisconsin-index-generator
+
+Usage
 =========================
-1. `git clone` this repository 
-2. `cd` to the cloned directory and install the dependencies with `npm install`
-3. Run `node index.js /path/to/apk_storage`
-4. There will be an `index.xml` file in `/path/to/apk_storage` directory.
+1. run `wisconsin-index-generator /path/to/apk_storage`
+2. There will be an `index.xml` file in `/path/to/apk_storage` directory.
 
 Example Output
 =========================

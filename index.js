@@ -1,5 +1,8 @@
+#!/usr/bin/env node
+
 /*jslint browser: true, devel: true, node: true, sloppy: true, plusplus: true, nomen: true*/
 /*global require */
+
 var fs = require('fs');
 var path = require('path');
 var utils = require('./lib/utils');

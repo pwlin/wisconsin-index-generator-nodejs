@@ -1,6 +1,6 @@
 {
     "name": "wisconsin-index-generator",
-    "version": "0.0.3",
+    "version": "0.0.7",
     "description": "Generate an index.xml file for a Raccoon archive",
     "main": "index.js",
     "bin": {
