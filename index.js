@@ -33,7 +33,7 @@ utils.forEach(files, function (k, v) {
     console.log('Processing ', v);
     aaptData = utils.aapt(v);
     apkId = aaptData.match(/package\: name='(.*?)'/)[1];
-    apkName = aaptData.match(/application\: label='(.*?)'/);
+    apkName = aaptData.match(/application\: label='(.*?)' /);
     if (apkName && apkName[1] && apkName[1] !== '') {
         apkName = apkName[1];
     } else {
